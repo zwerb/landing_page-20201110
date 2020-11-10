@@ -9,7 +9,7 @@ img {
 
 #header {
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   background-color: azure;
   display: flex;
   flex-flow: row wrap;
@@ -18,20 +18,41 @@ img {
   align-content: center;
 }
 
-#header > div {
+ #header > div {
   text-align: center;
   padding: 0.5rem;
   margin: 0.5rem;
   border: 1px solid #aaa;
-  max-width: calc(10.3333% - 2rem);
-  min-width: calc(10.3333% - 2rem);
-}
+  /* max-width: calc(10.3333% - 2rem);
+  min-width: calc(10.3333% - 2rem); */
+} 
 
 #header > .logo {
-  border: none;
+  /*border: none;*/
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   max-width: calc(15.3333% - 2rem);
   min-width: calc(15.3333% - 2rem);
 }
+
+.navigation {
+    /* width: 100%; */
+    min-width: calc(40.3333% - 2rem);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  
+  .navigation > div {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid #aaa;
+    max-width: calc(50.3333% - 2rem);
+    min-width: calc(20.3333% - 2rem);
+  }
 
 #welcome {
   width: 100%;
@@ -80,7 +101,7 @@ img {
 
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (min-device-width: 320px) and (max-device-width: 800px) {
+@media screen and (min-device-width: 240px) and (max-device-width: 800px) {
   #welcome {
     flex-flow: column-reverse wrap;
   }
@@ -100,6 +121,26 @@ img {
   #testimonial_area > div {
     max-width: 100%;
     margin: 0;
+  }
+
+  #header{
+      flex-flow:column;
+      align-items: center;
+  }
+
+  #header > div{
+    width: 100%;
+}
+
+  .navigation {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    flex-flow: column;
+    align-items: center;
+  }
+
+  .navigation > div{
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    width: 100%;
   }
 }
 
