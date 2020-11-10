@@ -1,0 +1,81 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+img {max-width:100%;}
+
+#header{
+    width: 100%;
+    height: 60px;
+    background-color: azure;
+    display: flex;  
+    flex-flow: row wrap;
+    justify-content: left;
+    min-height: 5vh;
+    align-content: center;
+}
+
+#header > div {
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border: 1px solid #aaa;
+    max-width: calc(10.3333% - 2rem);
+    min-width: calc(10.3333% - 2rem);
+}
+
+#welcome{
+    width: 100%;
+    background-color: lavender;
+
+    display: flex;  
+    flex-flow: row-reverse wrap-reverse;
+    justify-content: center;
+    min-height: 30vh;
+    align-content: center;
+}
+
+#welcome > div{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #aaa;
+    max-width: calc(33.3333% - 2rem);
+    min-width: calc(33.3333% - 2rem);
+}
+
+#welcome > div:nth-child(1){
+    order: 3;
+}
+
+#testimonial_area{
+    width: 100%;
+    background-color: midnightblue;
+    color: mintcream;
+
+    display: flex;  
+    flex-flow: row wrap;
+    justify-content: center;
+    min-height: 20vh;
+    align-content: center;
+}
+
+#testimonial_area > div{
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #aaa;
+    max-width: calc(20.3333% - 2rem);
+    min-width: calc(20.3333% - 2rem);
+}
+
+#content_area{
+    width: 100%;
+    background-color: lavender;
+
+    display: flex;  
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 30vh;
+    align-content: center;
+}
